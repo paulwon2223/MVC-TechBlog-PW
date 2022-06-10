@@ -1,0 +1,28 @@
+[
+    {
+        "title": "New Macbook M2 Chip... Thoughts?",
+        "description": "The Apple M2 chip appeared during the WWDC 2022 keynote as the power inside Apple's new 13-inch MacBook Air 2022 and MacBook Pro 2022.",
+        "user_id": 1
+    },
+    {
+        "title": "Javascript",
+        "description": "Javascript is sooooo awesome!!",
+        "user_id": 2
+    },
+    {
+        "title": "New Tesla Update",
+        "description": "The new tesla update is so cool! Thanks ELon!",
+        "user_id": 3
+    },
+    {
+        "title": "Iphone vs Galaxy",
+        "description": "The battle between the two phones continue",
+        "user_id": 4
+    },
+    {
+        "title": "Doge",
+        "description": "Doge to the mooooooooon!🚀🌕",
+        "user_id": 5
+    }
+
+]
