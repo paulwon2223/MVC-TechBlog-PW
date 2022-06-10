@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#maincont {
+    justify-content: center;
+    text-align: center;
+    margin-top: 300px;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: 'Cantarell', sans-serif;
+}
+
+#supreme {
+    font-family: 'Cantarell', sans-serif;
+}
+
+#loginbttn {
+    border-style: none;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
