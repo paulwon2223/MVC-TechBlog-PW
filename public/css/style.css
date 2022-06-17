@@ -18,9 +18,32 @@ h1 {
     font-family: 'Cantarell', sans-serif;
 }
 
-#launchbttn {
+#loginbttn {
     border-style: none;
     background-color: red;
     color: white;
     padding: 10px;
+}
+
+#formcont {
+    margin: 40px;
+    padding-top: 50px;
+}
+
+#descriptioninput {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#finishbttn {
+    border-radius: 30px;
+    border-width: 10px;
+}
+
+#cardcont {
+    margin: 40px;  
+}
+
+#newposttitle {
+    text-align: center;
 }

@@ -1,1 +1,28 @@
-<h1>blogs will go here</h1>
+<div id="navcont">
+    <ul class="nav justify-content-end"">
+    <li class=" nav-item">
+        <a id="signoutbttn" class="nav-link" href="#">Signout</a>
+        </li>
+    </ul>
+</div>
+
+<div id="formcont">
+    <form>
+        <p id="newposttitle">Post a blog here!</p>
+        <div class="input-group">
+            <input id="posttitle" type="text" class="form-control" placeholder="Title" />
+        </div>
+        <div class="input-group">
+            <input id="postinput" type="text" id="descriptioninput" class="form-control" placeholder="Description" />
+        </div>
+        <div class="d-grid">
+            <button id="finishblogbttn" type="button" class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div id="cardcont">
+            {{#each dbBlog}}
+            {{> post}}
+             {{/each}}
+</div>

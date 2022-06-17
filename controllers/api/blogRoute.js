@@ -2,11 +2,12 @@ const router = require("express").Router();
 const { Blog } = require("../../models");
 
 router.post('/', async (req, res) => {
+  console.log(req.body);
     try {
-        console.log(req.session);
-      const newPost = await Post.create({
-        ...req.body,
-        user_id: req.session.user_id,
+        // console.log(req.session);
+      const newPost = await Blog.create({
+        title: req.body.title,
+        description: req.body.post
       });
       
   
@@ -19,14 +20,39 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-      const postdb = await Post.findOne({
+      const postdb = await Blog.findOne({
         where: {
           id: req.params.id
         }
       });
   
       if (postdb.user_id === req.session.user_id) {
-        const deletePost = await Post.destroy({
+        const deletePost = await Blog.destroy({
+          where: {
+            id: req.params.id,
+          }
+        })
+        console.log('blog was deleted');
+        res.status(200).json(deletePost);
+      } else {
+        res.status(402).json({message: "no blog found"})
+      }
+  
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  })
+
+  router.delete('/:id', async (req, res) => {
+    try {
+      const postdb = await Blog.findOne({
+        where: {
+          id: req.params.id
+        }
+      });
+  
+      if (postdb.user_id === req.session.user_id) {
+        const deletePost = await Blog.destroy({
           where: {
             id: req.params.id,
           }
@@ -41,5 +67,6 @@ router.delete('/:id', async (req, res) => {
       res.status(400).json(err);
     }
   })
+  
   
   module.exports = router;
