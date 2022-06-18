@@ -1,3 +1,4 @@
+// ------- LOGIN FUNCTION ------- //
 const loginFormHandler = async (event) => {
   console.log("asdf");
   event.preventDefault();
@@ -19,14 +20,13 @@ const loginFormHandler = async (event) => {
       alert("Failed to log in");
     }
   }
-
-  // document.location.replace('/login');
 };
 
-document
-  .getElementById("signinbttn")
-  ?.addEventListener("click", loginFormHandler);
+document.getElementById("signinbttn")?.addEventListener("click", loginFormHandler);
 
+
+
+// ------- DIRECTS USERS TO LOGIN PAGE ------- //
 const loginPage = async (event) => {
   event.preventDefault();
 
@@ -35,6 +35,9 @@ const loginPage = async (event) => {
 
 document.getElementById("launchbttn")?.addEventListener("click", loginPage);
 
+
+
+// ------- DIRECTS USERS TO SIGNUP PAGE ------- //
 const signupPage = async (event) => {
   event.preventDefault();
 
@@ -43,6 +46,21 @@ const signupPage = async (event) => {
 
 document.getElementById("signupbttn")?.addEventListener("click", signupPage);
 
+
+
+
+// ------- DIRECTS USERS TO HOME PAGE ------- //
+const homePage = async (event) => {
+  event.preventDefault();
+
+  document.location.replace("/");
+};
+
+document.getElementById("homepage")?.addEventListener("click", homePage);
+
+
+
+// ------- SIGNUP FUNCTION ------- //
 const signup = async (event) => {
   event.preventDefault();
 
@@ -68,6 +86,9 @@ const signup = async (event) => {
 
 document.getElementById("newsignupbttn")?.addEventListener("click", signup);
 
+
+
+// ------- CREATES NEW BLOG POST ------- //
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -84,8 +105,6 @@ const newFormHandler = async (event) => {
     });
     console.log(post, title);
 
-    // document.getElementById('userpost').textContent = post
-
     if (response.ok) {
       window.location.reload();
     } else {
@@ -94,10 +113,11 @@ const newFormHandler = async (event) => {
   }
 };
 
-document
-  .getElementById("finishblogbttn")
-  ?.addEventListener("click", newFormHandler);
+document.getElementById("finishblogbttn")?.addEventListener("click", newFormHandler);
 
+
+
+// ------- LOG OUT USER ------- //
 const logout = async () => {
   const response = await fetch("/api/users/logout", {
     method: "POST",
@@ -113,6 +133,10 @@ const logout = async () => {
 
 document.querySelector("#signoutbttn")?.addEventListener("click", logout);
 
+
+
+
+// ------- DELETES BLOG ------- //
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');

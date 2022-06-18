@@ -18,6 +18,13 @@ h1 {
     font-family: 'Cantarell', sans-serif;
 }
 
+#launchbttn {
+    border-style: none;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+
 #loginbttn {
     border-style: none;
     background-color: red;

@@ -29,7 +29,7 @@ router.get("/signup", async (req, res) => {
 
 router.get("/blogs", async (req, res) => {
   const blogData = await Blog.findAll({
-
+    
   })
   console.log(blogData);
 
