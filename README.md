@@ -3,6 +3,7 @@
 #### Description
 - This application features a CMS-style blog where developers can log in and publish blog posts
 - The application follows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+- The final application is deployed on heroku
 
 ----------------------------
 #### Table of Contents
@@ -49,4 +50,4 @@
 * Paul Won
     * github-repo: https://github.com/paulwon2223/MVC-TechBlog-PW
     * email: wonpaul2223@gmail.com
-- Heroku Link: 
+    * heroku link: https://dry-ravine-05045.herokuapp.com/
